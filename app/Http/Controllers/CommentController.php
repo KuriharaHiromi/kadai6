@@ -10,9 +10,9 @@ use App\Models\Comment;
 class CommentController extends Controller{
     public function show_detail($id){
         $show_detail = Article::find($id);//select * from `articles` where `articles`.`id` = 'url上のid' limit 1
-        $comment_detail = Comment::where('article_id', $id)->orderBy('created_at', 'desc')->get();//select * from `comments` where `article_id` = 'url上のid' order by `created_at` desc
+        $comments = $show_detail->comments()->orderBy('created_at', 'desc')->get();//select * from `comments` where `comments`.`article_id` = url上のid and `comments`.`article_id` is not null order by `created_at` desc
         //↑投稿時間が時間が後のものから順に表示されるように並び替えて表示
-        return view('article.detail')->with(["article_detail" => $show_detail, "comment_detail" => $comment_detail]);
+        return view('article.detail')->with(["article_detail" => $show_detail, "comment_detail" => $comments]);
     }
 
     public function comment_save(CommentRequest $request) {
