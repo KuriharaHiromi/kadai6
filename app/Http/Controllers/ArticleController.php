@@ -27,7 +27,7 @@ class ArticleController extends Controller
             \DB::commit();
         }catch(\Throwable $e) {
             \DB::rollback();
-            abort(500);
+            echo "エラー" . $e->getMessage();
         }
 
         return redirect(route('articles'));
