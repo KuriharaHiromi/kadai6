@@ -17,9 +17,8 @@ class CreateArticlesTable extends Migration
             $table->id();//主キー　記事自体のID
             $table->string('title', 30); //文字列で３０字まで
             $table->text('article');//textで指定、制限なし
-            $table->timestamps();//投稿日時
+            $table->timestamps();//投稿日時$table->id();
         });
-           
     }
 
     /**
