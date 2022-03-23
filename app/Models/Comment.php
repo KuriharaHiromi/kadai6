@@ -9,7 +9,7 @@ class Comment extends Model
     protected $table = 'comments';
     protected $fillable = ['article_id','comment'];
     public function article_r() {
-        return $this->belongsTo('App\Article');
+        return $this->belongsTo('App\Models\Article');
     }
 
 }

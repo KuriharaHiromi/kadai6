@@ -10,7 +10,7 @@ class Article extends Model
     protected $table = 'articles';
     protected $fillable = ['title','article'];
     public function comments_r() {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Models\Comment');
 
     }
 }
