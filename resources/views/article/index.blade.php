@@ -4,7 +4,7 @@
 <title>Laravel News.index</title>
 </head>
 <body>
-<a href="http://localhost/">Laravel News</a>
+<a href="http://ec2-18-183-161-233.ap-northeast-1.compute.amazonaws.com/">Laravel News</a>
 <h1>さぁ、最新ニュースをシェアしましょう</h1>
 @if ($errors->any())<!-- $error_messageの中身が空でなければ(「タイトルは必須です。」または「記事は必須です。」が入ってれば) -->
 	<ul class="error_message">
