@@ -4,7 +4,7 @@
 <title>edit.php</title>
 </head>
 <body>
-<a href="http://localhost/">Laravel News</a><!--トップへのリンク-->
+<a href="http://ec2-18-183-161-233.ap-northeast-1.compute.amazonaws.com/">Laravel News</a><!--トップへのリンク-->
 <section>
 <article>
     <div class="article_class">
